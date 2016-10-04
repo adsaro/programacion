@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  form#codigo
+    label #include &ltstdio.h&gt
+    br
+    br
+    label int main(int argc, char *argv[]){
+    br
+    label printf(
+    input#edicion(type="text")
+    label );
+    button#newLine(type="button") Salto de linea
+    button#addTab(type="button") Tabulador
+    br
+    label }
+    br
+    button#ejecutar(type="button") Ver resultado
+    br
+    textarea#resultado
+    br
+    button#servidor(type="button") Ejecutar en el servidor
