@@ -1,4 +1,5 @@
 var exec = require('child_process').execSync;
+var execFile = require('child_process').spawnSync;
 var fs = require('fs');
 var express = require('express');
 var router = express.Router();
@@ -23,9 +24,9 @@ router.post('/', function(req, res, next) {
       var ruta = exec('pwd', {shell: '/bin/bash', encoding: 'utf8'});
       console.log(ruta);
       var compilacion = exec('gcc archivo.c', {shell: '/bin/bash', encoding: 'utf8'});
-      var ejecucion = exec(ruta.substr(0, ruta.length - 1) + '/a.out',{shell: '/bin/bash', encoding: 'utf8'});
+      var ejecucion = execFile(ruta.substr(0, ruta.length - 1) + '/a.out',{shell: '/bin/bash', encoding: 'utf8'});
       //fs.unlink
-      res.json(ejecucion);
+      res.json(ejecucion.stdout);
       res.end();
     });
   });

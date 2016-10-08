@@ -2,7 +2,7 @@ $(function(){
   $("#ejecutar").click(ejecucion);
   $("#newLine").click(newLine);
   $("#addTab").click(addTab);
-  $("#servidor").click(ejecucionServidor)
+  $("#servidor").click(ejecucionServidor);
 });
 
 
