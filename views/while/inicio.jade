@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+  .navegacion
+    a.anterior(href='/for/final') Anterior
+    a.siguiente.pull-right(href='/while/inicio_ejemplos') Siguiente
+  h1 Ciclo While
+  p.choro
+    | El ciclo while es un ciclo que se repetirá siempre que la condición sea verdadera, en el momento en que la condición
+    | sea falsa el ciclo ya no se ejecutará más.
+  pre.codigo
+    | while(condicion)
+    |   sentencia;
+  p.choro
+    | En el ejemplo anterior la
+    span
+      | sentencia
+    | se ejecutará simpre que la
+    span
+      | condicion
+    | sea verdadera.
+    | En el siguiente ejemplo la sentencia se ejecutará siempre ya que la condicion siempre es verdadera. Esto es lo que se llama
+    | un ciclo infinito (jamás termina).
+  pre.codigo
+    | while(true)
+    |   sentencia;
+  p.choro
+    | Por otro lado la sentencia en el siguiente código jamás será ejecutada ya que la condicion nunca es verdadera
+  pre.codigo
+    | while(false)
+    |   sentencia;
+  

@@ -12,6 +12,7 @@ var siteFor = require('./routes/routeFor');
 var variables = require('./routes/routesVariables');
 var entradaSalida = require('./routes/routesEntradaSalida');
 var ifSwitch = require('./routes/routesIfSwitch');
+var siteWhile = require('./routes/routesWhile');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use('/for', siteFor);
 app.use('/variables', variables);
 app.use('/es', entradaSalida);
 app.use('/if', ifSwitch);
+app.use('/while', siteWhile);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+  .navegacion
+    a.anterior(href='/while/inicio') Anterior
+    a.siguiente.pull-right(href='/while/bloque') Siguiente
+  h1 ¿Qué pasa si hay más de una sentencia despues del while?
+  p.choro
+    | Sólo una de las sentencias se ejecutará. Por ejemplo en el siguiente código sólo la
+    span
+      | sentencia1
+    | se ejecutará repetidamente mientras que la
+    span
+      | sentencia2
+    | se ejecutará sólo hasta que la 
+    span
+      | condicion
+    | sea falsa y se salga del ciclo while
+  pre.codigo
+    | while(condicion)
+    |   sentencia1;
+    | sentencia2;
+  p.choro
+    | Hay que tener en cuanta el hecho de que aunque en el código anterior se ve gráficamente cómo 
+    span
+      | sentencia1
+    | se encuentra dentro de while y
+    span
+      | sentencia2
+    | se encuentra fuera del while, el lenguaje C no interpreta los espacios y son puestos en el código sólo para que sea más facil de leer.
+    | No obstante el compilador de C interpretará el código anterior del mismo modo que al código siguiente
+  pre.codigo
+    | while(condicion)
+    | sentencia1;
+    |   sentencia2;
+  p.choro
+    | E incluso será interpretado del mismo modo que el siguiente código
+  pre.codigo
+    | while(condicion) sentencia1; sentencia2;

@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  .navegacion
+    a.anterior(href='/while/bloque') Anterior
+    a.siguiente.pull-right(href='/while/multiple') Siguiente
+  h1 ¿Para qué puede ser usado el ciclo while?
+  p.choro
+    | El ciclo while puede ser usado para cualquier cosa que se desee repetir mientras se cumpla una condicion
+  p.choro
+    | Un ejemplo muy usual del uso de while es cuando presentamos un menú al usuario y este debe elejir si desea volver a usar nuestro
+    | programa o si prefiere terminarlo. El siguiente programa pregunta al usuario si desea volver a utilizarlo despues de terminar su
+    | ejecución, para terminarlo sólo se debe ingresar la letra N.
+  pre.codigo
+    | #include &ltstdio.h&gt
+    | 
+    | int main()
+    | {
+    |   char respuesta = 'S';
+    |   while(respuesta != N)
+    |   {
+    |     printf("Este programa sólo imprime está linea de salida y termina\n");
+    |     printf("Desea volver a usar el programa?");
+    |     getc(respuesta);
+    |   }
+    | }
+  

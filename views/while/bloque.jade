@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  .navegacion
+    a.anterior(href='/while/multiple') Anterior
+    a.siguiente.pull-right(href='/while/usos') Siguiente
+  h1 Pero, ¿Y si quiero que se repita más de una sentencia?
+  p.choro
+    | Para lograr que se repita entonces más de una sentencia será necesario encerrar todas las sentencias que se deseen ejecutar dentro de 
+    | un bloque de código. Hay que recordar que un bloque de código es tratado exactamente de la misma forma que una sóla sentencia por el
+    | lenguaje C.
+  p.choro
+    | El siguiente código repetirá todas las sentencias que se encuentran dentro del bloque (acotado por { y }) siempre que la condición sea verdadera.
+  pre.codigo
+    | while(condicion)
+    |   {
+    |     sentencia1;
+    |     sentencia2;
+    |     sentencia3;
+    |     ...
+    |   }
