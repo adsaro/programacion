@@ -3,18 +3,18 @@ extends ../layout
 block content
   .navegacion
     a.anterior(href='/while/inicio') Anterior
-    a.siguiente.pull-right(href='/while/bloque') Siguiente
+    a.siguiente.pull-right(href='/while/multiple_ejemplos') Siguiente
   h1 ¿Qué pasa si hay más de una sentencia despues del while?
   p.choro
-    | Sólo una de las sentencias se ejecutará. Por ejemplo en el siguiente código sólo la
-    span
-      | sentencia1
-    | se ejecutará repetidamente mientras que la
-    span
-      | sentencia2
-    | se ejecutará sólo hasta que la 
-    span
-      | condicion
+    | Sólo una de las sentencias se ejecutará. Por ejemplo en el siguiente código sólo la 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold")
+      | sentencia1 
+    | se ejecutará repetidamente mientras que la 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold")
+      | sentencia2 
+    | se ejecutará sólo unz vez despues de que la 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold")
+      | condicion 
     | sea falsa y se salga del ciclo while
   pre.codigo
     | while(condicion)
@@ -22,11 +22,11 @@ block content
     | sentencia2;
   p.choro
     | Hay que tener en cuanta el hecho de que aunque en el código anterior se ve gráficamente cómo 
-    span
-      | sentencia1
-    | se encuentra dentro de while y
-    span
-      | sentencia2
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold")
+      | sentencia1 
+    | se encuentra dentro de while y 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold")
+      | sentencia2 
     | se encuentra fuera del while, el lenguaje C no interpreta los espacios y son puestos en el código sólo para que sea más facil de leer.
     | No obstante el compilador de C interpretará el código anterior del mismo modo que al código siguiente
   pre.codigo
@@ -37,3 +37,8 @@ block content
     | E incluso será interpretado del mismo modo que el siguiente código
   pre.codigo
     | while(condicion) sentencia1; sentencia2;
+  p.choro
+    | Lo único que se ejecutará repetidamente en cualquiera de los casos será la primer sentencia despues del ciclo 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold") while
+    | , la cual termina en el primer 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold") ;

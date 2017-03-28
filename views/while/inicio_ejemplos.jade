@@ -6,21 +6,22 @@ block content
     a.siguiente.pull-right(href='/while/multiple') Siguiente
   h1 Ciclo While
   p.choro
-    | El siguiente fragmento de código hará que el círculo gire para siempre ya que la condicion es siempre verdadera (true)
+    | El siguiente fragmento de código hará que el engrane gire para siempre ya que la condicion es siempre verdadera (true)
   pre.codigo
     | while(1==1)
-    |   girar_circulo(1);
-  canvas#girando
+    |   girar_engrane(1);
+  img#engrane1(src="/images/gear.png")
   p.choro
     | Podemos ver que la condición del ejemplo anterior es siempre verdadera porque no importa dónde ni cuándo se ejecute
     | el número 1 siempre será igual al número 1.
   p.choro
-    | En el ejemplo anterior la función girar_circulo() es una función definida unicamente para mostrar el efecto del ciclo
+    | En el ejemplo anterior la función girar_engrane() es una función definida unicamente para mostrar el efecto del ciclo
     | while, no es una función que exista en el lenguaje C sino sólo para fines demostrativos en esta página.
   p.choro
     | En el siguiente fragmento de código tenemos algo muy similar al caso anterior pero en esta ocasión la condición simpre
-    | resulta ser falsa y así el círculo nunca gira.
+    | resulta ser falsa y así el engrane nunca gira.
   pre.codigo
     | while(1==0)
-    |   girar_circulo(1);
-  canvas#quieto
+    |   girar_engrane(1);
+  img#engrane2(src="/images/gear.png")
+  script(src="/javascripts/while/inicio_ejemplos.js")

@@ -18,6 +18,10 @@ router.get('/multiple', function(req, res, next) {
   res.render('while/multiple', { title: 'Ciclo While - Sentencias multiples' });
 });
 
+router.get('/multiple_ejemplos', function(req, res, next) {
+  res.render('while/multiple_ejemplos', { title: 'Ciclo While - Sentencias multiples' });
+});
+
 router.get('/bloque', function(req, res, next) {
   res.render('while/bloque', { title: 'Ciclo While - Sentencias en bloque' });
 });

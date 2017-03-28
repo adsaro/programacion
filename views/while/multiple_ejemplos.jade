@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  .navegacion
+    a.anterior(href='/while/multiple') Anterior
+    a.siguiente.pull-right(href='/while/bloque') Siguiente
+  h1 Ciclo While
+  p.choro
+    | El siguiente fragmento de código hará que el primer engrane gire para siempre pero el segundo engrane no girará ya que la instrucción que lo
+    | hace girar se encuentra fuera del ciclo while y sólo se ejecutará cuando la condicion del while sea falsa y este termine.
+  pre.codigo
+    | while(1==1)
+    |   girar_engrane1(1);
+    | girar_engrane2(1);
+  img#engrane1(src="/images/gear.png")
+  img#engrane2(src="/images/gear.png")
+  p.choro
+    | En el ejemplo anterior sólo gira
+  script(src="/javascripts/while/inicio_ejemplos.js")
