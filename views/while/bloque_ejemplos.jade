@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  .navegacion
+    a.anterior(href='/while/bloque') Anterior
+    a.siguiente.pull-right(href='/while/usos') Siguiente
+  h1 Como ejecutar más de una sentencia dentro de un Ciclo While
+  p.choro
+    | El siguiente fragmento de código hará que ambos engranes giren para siempre ya que ambas sentencias se encuentran dentro del ciclo while
+    | gracias al bloque de codigo delimitado por { y }
+  pre.codigo
+    | while(1==1)
+    | {
+    |   girar_engrane1();
+    |   girar_engrane2();
+    | }
+  img#engrane1(src="/images/gear.png")
+  img#engrane2(src="/images/gear.png")
+  script(src="/javascripts/while/bloque_ejemplos.js")

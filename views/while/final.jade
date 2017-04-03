@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+  .navegacion
+    a.anterior(href='/while/anidados') Anterior
+    a.siguiente.pull-right(href='/do_while/inicio') Siguiente
+  h1 Conclusiones
+  p.choro
+    | El ciclo while es una estructura de control muy versatil que puede ser usado de mucha formas distintas.
+  p.choro
+    | Como ultimo ejemplo del uso de esta estructura de control mostraremos un porgrama que se repetirá indefinidamente hasta que el usuario
+    | indique que desea que el programa termine.
+  pre.codigo
+    | #include &ltstdio.h&gt
+    | 
+    | int main()
+    | {
+    |   char respuesta = 'S';
+    |   int i, j;
+    |   while(respuesta != 'S' && reespuesta != 's')
+    |   {
+    |     i = 0;
+    |     printf("Este programa imprime un triangulo en pantalla hecho de *\n");
+    |     while(i < 10){
+    |       j = 0;
+    |       while(j <= i){
+    |         printf("*");
+    |         j = j + 1;
+    |       }
+    |       printf("\n");
+    |       i = i + 1;
+    |     }
+    |     printf("Desea terminar el programa?(S/N)");
+    |     getc(respuesta);
+    |   }
+    | }
+  p.choro
+    | En el código anterior podemos ver un sencillo uso de aplicación de las cosas vistas hasta ahora como son el uso de más de una condición,
+    | el uso de { y } para incluir más de una sentencia dentro del ciclo while y tambien el uso de ciclos anidados.

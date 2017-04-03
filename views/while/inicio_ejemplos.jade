@@ -9,7 +9,7 @@ block content
     | El siguiente fragmento de código hará que el engrane gire para siempre ya que la condicion es siempre verdadera (true)
   pre.codigo
     | while(1==1)
-    |   girar_engrane(1);
+    |   girar_engrane();
   img#engrane1(src="/images/gear.png")
   p.choro
     | Podemos ver que la condición del ejemplo anterior es siempre verdadera porque no importa dónde ni cuándo se ejecute
@@ -22,6 +22,6 @@ block content
     | resulta ser falsa y así el engrane nunca gira.
   pre.codigo
     | while(1==0)
-    |   girar_engrane(1);
+    |   girar_engrane();
   img#engrane2(src="/images/gear.png")
   script(src="/javascripts/while/inicio_ejemplos.js")

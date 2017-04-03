@@ -20,4 +20,5 @@ function rotateAnimation(el,speed){
 	}
 }
 
-rotateAnimation("engrane1", 15);
+rotateAnimation("engrane1", 30);
+rotateAnimation("engrane2", 30);

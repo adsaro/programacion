@@ -2,8 +2,8 @@ extends ../layout
 
 block content
   .navegacion
-    a.anterior(href='/while/bloque') Anterior
-    a.siguiente.pull-right(href='/while/multiple') Siguiente
+    a.anterior(href='/while/bloque_ejemplos') Anterior
+    a.siguiente.pull-right(href='/while/contar') Siguiente
   h1 ¿Para qué puede ser usado el ciclo while?
   p.choro
     | El ciclo while puede ser usado para cualquier cosa que se desee repetir mientras se cumpla una condicion
@@ -17,10 +17,10 @@ block content
     | int main()
     | {
     |   char respuesta = 'S';
-    |   while(respuesta != N)
+    |   while(respuesta != 'N')
     |   {
     |     printf("Este programa sólo imprime está linea de salida y termina\n");
-    |     printf("Desea volver a usar el programa?");
+    |     printf("Desea volver a usar el programa?(S/N)");
     |     getc(respuesta);
     |   }
     | }

@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+  .navegacion
+    a.anterior(href='/while/usos') Anterior
+    a.siguiente.pull-right(href='/while/condicion_multiple') Siguiente
+  h1 Ciclo while para contar.
+  p.choro
+    | El hecho de que el ciclo while se ejecutará mientras la condición sea verdadera nos permite utilizarlo para contar
+  p.choro
+    | El siguiente fragmento de codigo contará e imprimirá en pantalla los numeros desde 0 hasta 10
+  pre.codigo
+    | #include &ltstdio.h&gt
+    | 
+    | int main()
+    | {
+    |   int i < 0;
+    |   while(i < 10)
+    |   {
+    |     printf("%d\n", i);
+    |     i = i + 1;
+    |   }
+    | }
+  p.choro
+    | Notese cómo en el codigo anterior se cuentan los numeros hasta el 9 y no hasta el 10 ya que la condicion es que 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold") i 
+    | sea estrictamente menor que 10. Una vez que 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold") i 
+    | toma el valor de 10 despues de imprimir 9, la condicion del ciclo while ya no es verdadera y por lo tanto ya no se vuelve a
+    | repetir la instrucción para imprimir el nuevo valor de 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold") i.
+  p.choro
+    | Si lo que se desea es imprimir los valores hasta 10 la condición deberá ser entonces 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold") i <= 10, 
+    | de esta manera el ciclo while se ejecutará siempre que el numero sea menor o igal que 10, así cuando 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold") i 
+    | tome el valor de 10 la condicion seguirá siendo verdadera y se ejecutará la orden de imprimir el nuevo valor 10.

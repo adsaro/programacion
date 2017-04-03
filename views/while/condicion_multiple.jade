@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+  .navegacion
+    a.anterior(href='/while/contar') Anterior
+    a.siguiente.pull-right(href='/while/anidados') Siguiente
+  h1 ¿Cómo hago entonces para incluir más de una condición?
+  p.choro
+    | Si lo que se desea es tener más de una condición debemos incluirlas conectadas con operadores lógicos como || (o lógico) o &&
+    | (y lógico)
+  p.choro
+    | El siguiente código contiene dos condiciones y el el ciclo while se ejecutará siempre y cuando ambas condiciones sean iguales ya que
+    | el operador lógico utilizado es &&
+  pre.codigo
+    | while(condicion1 && condicion2)
+    |   {
+    |     sentencia1;
+    |     sentencia2;
+    |     sentencia3;
+    |     //Este cuerpo sólo se ejecutará si ambas condiciones son verdaderas
+    |     ...
+    |   }
+  p.choro
+    | En el código anterior ambas condiciones deben ser verdaderas para que el ciclo while se ejecute. Si cualquiera de las dos condiciones
+    | es falsa entonces el valor lógico de las condiciones será falsa y el ciclo no se ejecutará.
+  p.choro
+    | Si por el contrario lo que queremos es que se ejecute el ciclo siempre y cuando al menos una de las condiciones sea verdadera
+    | deberemos conectarlas con un operador || como en el siguiente ejemplo
+  pre.codigo
+    | while(condicion1 || condicion2)
+    |   {
+    |     sentencia1;
+    |     sentencia2;
+    |     sentencia3;
+    |     //Este cuerpo se ejecutará si al menos una de las condiciones es verdadera
+    |     ...
+    |   }

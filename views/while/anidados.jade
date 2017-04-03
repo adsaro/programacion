@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+  .navegacion
+    a.anterior(href='/while/condicion_multiple') Anterior
+    a.siguiente.pull-right(href='/while/final') Siguiente
+  h1 Ciclos While Anidados
+  p.choro
+    | En muchas ocasiones es muy conveniente repetir operaciones en multiples niveles, es decir, crear repeticiones dentro de otras repeticiones.
+    | Un ejemplo clar de esto es en una matriz, donde debemos repetir operaciones sobre cada renglon, por lo tanto podemos hacer un ciclo que
+    | se repita una vez para cada renglon, pero ademas dentro de cada renglon debemos debemos repetir alguna operación sobre cada columna.
+  p.choro
+    | A esta operación de repetición dentro de otra repetición le llamamos un cilo anidado y podemos ver un ejemplo de dicho ciclo en el siguiente
+    | fragmento de código.
+  pre.codigo
+    | int i = 0; //declaramos las variables i y j y las inicializamos en 0
+    | int j = 0;
+    | while(i < renglones){   //con este ciclo avanzaremos en los renglones
+    |   while(j < columnas){  //con este ciclo avanzaremos en las columnas dentro de cada renglon
+    |     //Realizamos alguna operacion con el elemento (i,j) de la matriz
+    |     j = j + 1;          //aumentamos el valor de j para que en la siguiente iteracion tome la siguiente columna
+    |   }
+    |   j = 0;                //despues de terminar con las columnas del reglon regresamos a j a 0 para empezar en el comienzo del siguiente renglon
+    |   i = i + 1;            //aumentamos el valor de i para que en la siguiente iteracion tome el siguiente renglon
+    | }
+  p.choro
+    | En el ejemplo anterior podemos ver dos ciclos while anidados, sin embargo es posible anidar tantos como sea necesario pero hay que tener
+    | cuidado de asegurarnos de que incluimos los incrementos adecuados para que nuestros ciclos while terminen, ya que si en el ejemplo
+    | anterior no aumentamos los valores de i y de j las condiciones de los ciclos while siempre seran verdaderas ya que ni i ni j crecen para
+    | que en algun momento sean mayores que los renglones o las columnas y nuestro programa se quedará atorado haciendo el mismo calculo para
+    | siempre.

@@ -4,16 +4,20 @@ block content
   .navegacion
     a.anterior(href='/while/multiple') Anterior
     a.siguiente.pull-right(href='/while/bloque') Siguiente
-  h1 Ciclo While
+  h1 Ejemplo de sentencias despues del Ciclo While
   p.choro
     | El siguiente fragmento de código hará que el primer engrane gire para siempre pero el segundo engrane no girará ya que la instrucción que lo
     | hace girar se encuentra fuera del ciclo while y sólo se ejecutará cuando la condicion del while sea falsa y este termine.
   pre.codigo
     | while(1==1)
-    |   girar_engrane1(1);
-    | girar_engrane2(1);
+    |   girar_engrane1();
+    | girar_engrane2();
   img#engrane1(src="/images/gear.png")
   img#engrane2(src="/images/gear.png")
   p.choro
-    | En el ejemplo anterior sólo gira
+    | En el ejemplo anterior sólo gira el primer engrane ya que sólo la sentencia 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold") girar_engrane1() 
+    | es la que se encuentra dentro del ciclo while y por tanto es la unica que se ejecuta repetidamente mientras que la sentencia 
+    span(style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; font-weight: bold") girar_engrane2() 
+    | nunca se ejecuta puesto que nunca se sale del ciclo while infinito.
   script(src="/javascripts/while/inicio_ejemplos.js")
